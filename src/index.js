@@ -5,10 +5,9 @@
  * @returns number of weeks needed for finish education
  */
 module.exports = function getTimeForEducation(
-    focus = 'family', 
-    knowsProgramming = true,
-    config = {family: 4}
-    ) {
-      return 0;
-  };
-  
+  focus = "family",
+  knowsProgramming = true,
+  config = { family: 4 }
+) {
+  return Math.ceil((800 + (knowsProgramming ? 0 : 500)) / config[focus]);
+};
